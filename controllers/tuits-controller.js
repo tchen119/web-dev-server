@@ -2,20 +2,16 @@ import * as tuitsDao from "../tuits/tuits-dao.js";
 
 const createTuit = async (req, res) => {
   const newTuit = req.body;
-  const insertedTuit = await tuitsDao.createTuit(newTuit);
-
-//  newTuit._id = (new Date()).getTime()+'';
-//  newTuit.stats = {
-//    retuits: 111,
-//    likes: 222,
-//    replies: 333,
-//    dislikes: 123
-//  };
-//  newTuit.postedBy = {
-//    "username": "ReactJS"
-//  }
-//  tuits.push(newTuit);
-  res.json(insertedTuit);
+  newTuit.postedBy = {
+    "username": "Webdev"
+  };
+  newTuit.stats = {
+    "retuits": 111,
+    "likes": 222,
+    "replies": 333
+  };
+  //const insertedTuit = await tuitsDao.createTuit(newTuit);
+  //res.json(insertedTuit);
 }
 
 const findAllTuits = async (req, res) => {
