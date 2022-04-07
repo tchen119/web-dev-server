@@ -5,7 +5,7 @@ import userController from "./controllers/user-controller.js";
 import tuitsController from "./controllers/tuits-controller.js";
 import mongoose from 'mongoose';
 
-mongoose.connect('mongodb://localhost:27017/webdev');
+mongoose.connect('mongodb+srv://webdev-tuiter:tuiter-password@cluster0.oy0iv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority');
 
 const app = express();
 app.use(express.json());
