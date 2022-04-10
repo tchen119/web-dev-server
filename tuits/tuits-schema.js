@@ -5,6 +5,11 @@ const schema = mongoose.Schema({
   likes: Number,
   postedBy: {
     username: String
+  },
+  stats: {
+    retuits: Number,
+    likes: Number,
+    replies: Number
   }
 }, {collection: 'tuits'});
 

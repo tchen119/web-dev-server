@@ -10,8 +10,8 @@ const createTuit = async (req, res) => {
     "likes": 222,
     "replies": 333
   };
-  //const insertedTuit = await tuitsDao.createTuit(newTuit);
-  //res.json(insertedTuit);
+  const insertedTuit = await tuitsDao.createTuit(newTuit);
+  res.json(insertedTuit);
 }
 
 const findAllTuits = async (req, res) => {
